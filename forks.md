@@ -1,21 +1,21 @@
 # Forked Repositories
 
-- [Analysis-Services](None) - Git repo for Analysis Services samples and community projects
-- [Azure-DataFactory](None) - 
-- [azure-quickstart-templates](None) - Azure Quickstart Templates
-- [azuredatastudio](None) - Azure Data Studio is a data management tool that enables working with SQL Server, Azure SQL DB and SQL DW from Windows, macOS and Linux.
-- [Data-and-AI-Platform](None) - Open Source Public Repo of Microsoft Data & AI Platform
-- [DataSaturdays](None) - A repository for open sourcing a solution for Data Saturdays
-- [dbops](None) - ⚙ dbops - Powershell module that provides continuous database deployments on any scale
-- [elt-framework](None) - Extract Load Transform (ELT) framework is a metadata based batch orchestration framework for modern data platforms. Implemented using Azure PaaS data services. Common ingestion and transformation patterns available out of box. Reusable code can be easily extended to cater to custom patterns.
-- [fab-demos](None) - 
-- [fabric-accelerator](None) - Accelerator to build a Microsoft Fabric modern data platform using pre-built reusable Fabric items and an orchestration ELT Framework
-- [fabric-cicd](None) - Jumpstart CICD deployments in Microsoft Fabric
-- [fabric-cli-powerbi-cicd-sample](None) - 
-- [fabric_cat_tools](None) - Supercharge your Microsoft Fabric development with the fabric_cat_tools library
-- [msfabricutils](None) - Spark-free Python utilities for Microsoft Fabric focused on Data Engineering using Polars and delta-rs
-- [mslearn-tailspin-spacegame-web](None) - Code used in Microsoft Learn modules to support Azure DevOps
-- [mslearn-tailspin-spacegame-web-models](None) - Code used in Microsoft Learn modules to support Azure DevOps
-- [powerrti](None) - This is a PowerShell Module that can help automate tasks with Fabric Real-Time Intelligence.
-- [sqlwatch](None) - SQL Server Performance Monitor
-- [Synapse-workspace-deployment](None) - 
+- [Analysis-Services](URL not found) - Git repo for Analysis Services samples and community projects
+- [Azure-DataFactory](URL not found) - 
+- [azure-quickstart-templates](URL not found) - Azure Quickstart Templates
+- [azuredatastudio](URL not found) - Azure Data Studio is a data management tool that enables working with SQL Server, Azure SQL DB and SQL DW from Windows, macOS and Linux.
+- [Data-and-AI-Platform](URL not found) - Open Source Public Repo of Microsoft Data & AI Platform
+- [DataSaturdays](URL not found) - A repository for open sourcing a solution for Data Saturdays
+- [dbops](URL not found) - ⚙ dbops - Powershell module that provides continuous database deployments on any scale
+- [elt-framework](URL not found) - Extract Load Transform (ELT) framework is a metadata based batch orchestration framework for modern data platforms. Implemented using Azure PaaS data services. Common ingestion and transformation patterns available out of box. Reusable code can be easily extended to cater to custom patterns.
+- [fab-demos](URL not found) - 
+- [fabric-accelerator](URL not found) - Accelerator to build a Microsoft Fabric modern data platform using pre-built reusable Fabric items and an orchestration ELT Framework
+- [fabric-cicd](URL not found) - Jumpstart CICD deployments in Microsoft Fabric
+- [fabric-cli-powerbi-cicd-sample](URL not found) - 
+- [fabric_cat_tools](URL not found) - Supercharge your Microsoft Fabric development with the fabric_cat_tools library
+- [msfabricutils](URL not found) - Spark-free Python utilities for Microsoft Fabric focused on Data Engineering using Polars and delta-rs
+- [mslearn-tailspin-spacegame-web](URL not found) - Code used in Microsoft Learn modules to support Azure DevOps
+- [mslearn-tailspin-spacegame-web-models](URL not found) - Code used in Microsoft Learn modules to support Azure DevOps
+- [powerrti](URL not found) - This is a PowerShell Module that can help automate tasks with Fabric Real-Time Intelligence.
+- [sqlwatch](URL not found) - SQL Server Performance Monitor
+- [Synapse-workspace-deployment](URL not found) - 

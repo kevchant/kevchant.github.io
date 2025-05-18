@@ -24,7 +24,7 @@ with open("forks.md", "w", encoding="utf-8") as f:
             name = repo["name"]
             desc = repo.get("description") or ""
             # url = repo["html_url"]
-            url = repo["source"]
+            url = repo.get("source")
             f.write(f"- [{name}]({url}) - {desc}\n")
     else:
         f.write("No forked repositories found.\n")

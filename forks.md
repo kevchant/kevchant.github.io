@@ -1,21 +1,2 @@
 # Forked Repositories
 
-- [Analysis-Services](Unknown source URL) - Git repo for Analysis Services samples and community projects
-- [Azure-DataFactory](Unknown source URL) - 
-- [azure-quickstart-templates](Unknown source URL) - Azure Quickstart Templates
-- [azuredatastudio](Unknown source URL) - Azure Data Studio is a data management tool that enables working with SQL Server, Azure SQL DB and SQL DW from Windows, macOS and Linux.
-- [Data-and-AI-Platform](Unknown source URL) - Open Source Public Repo of Microsoft Data & AI Platform
-- [DataSaturdays](Unknown source URL) - A repository for open sourcing a solution for Data Saturdays
-- [dbops](Unknown source URL) - ⚙ dbops - Powershell module that provides continuous database deployments on any scale
-- [elt-framework](Unknown source URL) - Extract Load Transform (ELT) framework is a metadata based batch orchestration framework for modern data platforms. Implemented using Azure PaaS data services. Common ingestion and transformation patterns available out of box. Reusable code can be easily extended to cater to custom patterns.
-- [fab-demos](Unknown source URL) - 
-- [fabric-accelerator](Unknown source URL) - Accelerator to build a Microsoft Fabric modern data platform using pre-built reusable Fabric items and an orchestration ELT Framework
-- [fabric-cicd](Unknown source URL) - Jumpstart CICD deployments in Microsoft Fabric
-- [fabric-cli-powerbi-cicd-sample](Unknown source URL) - 
-- [fabric_cat_tools](Unknown source URL) - Supercharge your Microsoft Fabric development with the fabric_cat_tools library
-- [msfabricutils](Unknown source URL) - Spark-free Python utilities for Microsoft Fabric focused on Data Engineering using Polars and delta-rs
-- [mslearn-tailspin-spacegame-web](Unknown source URL) - Code used in Microsoft Learn modules to support Azure DevOps
-- [mslearn-tailspin-spacegame-web-models](Unknown source URL) - Code used in Microsoft Learn modules to support Azure DevOps
-- [powerrti](Unknown source URL) - This is a PowerShell Module that can help automate tasks with Fabric Real-Time Intelligence.
-- [sqlwatch](Unknown source URL) - SQL Server Performance Monitor
-- [Synapse-workspace-deployment](Unknown source URL) - 

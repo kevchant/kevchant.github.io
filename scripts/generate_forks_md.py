@@ -11,6 +11,8 @@ headers = {"Authorization": f"token {github_token}"}
 response = requests.get(url, headers=headers)
 repos = response.json()
 
+forked_repos = [repo for repo in repos if repo.get("fork")]
+
 for repo in forked_repos:
     parent = repo.get("parent", {})
     print(f"Parent information: {parent}")

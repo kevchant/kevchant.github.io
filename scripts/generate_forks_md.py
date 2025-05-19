@@ -2,7 +2,7 @@ import os
 import requests
 
 github_account = os.environ.get("GH_USERNAME", "kevchant")
-url = f"https://api.github.com/users/{USERNAME}/repos"
+url = f"https://api.github.com/users/{github_account}/repos"
 
 response = requests.get(url)
 repos = response.json()

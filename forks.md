@@ -60,6 +60,11 @@
   - **Original Owner**: RuiRomano
   - **Description**: None
 
+- **[fabric-toolbox](https://github.com/kevchant/fabric-toolbox)**
+  - **Original Repository**: [https://github.com/microsoft/fabric-toolbox](https://github.com/microsoft/fabric-toolbox)
+  - **Original Owner**: microsoft
+  - **Description**: Fabric toolbox is a repository of tools, accelerators, scripts, and samples to accelerate your success with Microsoft Fabric, brought to you by Fabric CAT.
+
 - **[fabric_cat_tools](https://github.com/kevchant/fabric_cat_tools)**
   - **Original Repository**: [https://github.com/m-kovalsky/fabric_cat_tools](https://github.com/m-kovalsky/fabric_cat_tools)
   - **Original Owner**: m-kovalsky

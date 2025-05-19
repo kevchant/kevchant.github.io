@@ -11,6 +11,7 @@ forked_repos = [repo for repo in repos if repo.get("fork")]
 
 for repo in forked_repos:
     parent = repo.get("parent", {})
+    print(f"Parent information: {parent}")
     print(f"Forked Repository: {repo['html_url']}")
     print(f"Original Repository: {parent.get('html_url', 'Unknown')}")
     print(f"Owner: {parent.get('owner', {}).get('login', 'Unknown')}")

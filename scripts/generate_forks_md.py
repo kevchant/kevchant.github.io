@@ -7,7 +7,10 @@ github_token = os.environ['TOKEN']
 
 # GitHub API URL to fetch repositories
 url = f"https://api.github.com/users/{github_account}/repos"
-headers = {"Authorization": f"token {github_token}"}
+headers = {
+    "Authorization": f"token {github_token}",
+    "Accept": "application/vnd.github.v3+json"
+}
 
 def fetch_repositories(api_url, headers):
     """Fetch all repositories for the given GitHub account."""

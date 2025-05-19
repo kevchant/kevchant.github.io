@@ -19,8 +19,9 @@ def fetch_repositories(api_url, headers):
         response = requests.get(api_url, headers=headers)
         response.raise_for_status()  # Raise an error for bad responses
         repos.extend(response.json())
-        # Debugging: Print the rate limit remaining
-        print(f"Rate limit remaining: {response.headers.get('X-RateLimit-Remaining')}")
+        # Debugging: Print the raw JSON response for each repository
+        for repo in response.json():
+            print(f"Debug: Repository data: {repo}")
         # Check for pagination
         api_url = response.links.get('next', {}).get('url')
     return repos

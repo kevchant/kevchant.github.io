@@ -22,8 +22,9 @@ with open("forks.md", "w", encoding="utf-8") as f:
     if forks:
         for repo in forks:
             name = repo["name"]
+            owner = repo["owner"]
             desc = repo.get("description") or ""
-            url = repo["parent"]
-            f.write(f"- [{name}]({url}) - {desc}\n")
+            url = repo["parent"]["html_url"]
+            f.write(f"- {owner}-[{name}]({url}) - {desc}\n")
     else:
         f.write("No forked repositories found.\n")

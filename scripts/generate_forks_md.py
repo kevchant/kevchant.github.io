@@ -36,6 +36,8 @@ def generate_forks_markdown(forked_repos, output_file="forks.md"):
                 fork_url = repo["html_url"]
                 parent = repo.get("parent", {})
 
+                print(f"Debug: Full repository data for {repo['name']}: {repo}")
+
                 # Debugging: Print the parent object to understand its structure
                 print(f"Debug: Parent object for {name}: {parent}")
 

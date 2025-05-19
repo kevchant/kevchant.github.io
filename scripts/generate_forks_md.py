@@ -2,7 +2,7 @@ import os
 import requests
 
 USERNAME = os.environ.get("GH_USERNAME", "kevchant")
-API_URL = f"https://api.github.com/users/{USERNAME}/repos?per_page=100&type=owner"
+API_URL = f"https://api.github.com/users/{USERNAME}/repos?per_page=100&type=forks"
 
 def get_all_repos(url):
     repos = []

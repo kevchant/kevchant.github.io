@@ -18,10 +18,12 @@ def fetch_repositories(api_url, headers):
     while api_url:
         response = requests.get(api_url, headers=headers)
         response.raise_for_status()  # Raise an error for bad responses
-        repos.extend(response.json())
-        # Debugging: Print the raw JSON response for each repository
-        for repo in response.json():
-            print(f"Debug: Repository data: {repo}")
+        data = response.json()  # Parse JSON once
+        # Debugging: Print the full response for forked repositories
+        for repo in data:
+            if repo.get("fork"):
+                print(f"Debug: Full data for forked repo {repo['name']}: {repo}")
+        repos.extend(data)
         # Check for pagination
         api_url = response.links.get('next', {}).get('url')
     return repos

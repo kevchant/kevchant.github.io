@@ -5,32 +5,50 @@ import requests
 github_account = "kevchant"
 github_token = os.environ['TOKEN']
 
+# GitHub API URL to fetch repositories
 url = f"https://api.github.com/users/{github_account}/repos"
 headers = {"Authorization": f"token {github_token}"}
 
-response = requests.get(url, headers=headers)
-repos = response.json()
+def fetch_repositories(api_url, headers):
+    """Fetch all repositories for the given GitHub account."""
+    repos = []
+    while api_url:
+        response = requests.get(api_url, headers=headers)
+        response.raise_for_status()  # Raise an error for bad responses
+        repos.extend(response.json())
+        # Check for pagination
+        api_url = response.links.get('next', {}).get('url')
+    return repos
 
-forked_repos = [repo for repo in repos if repo.get("fork")]
+def generate_forks_markdown(forked_repos, output_file="forks.md"):
+    """Generate a Markdown file listing forked repositories and their originals."""
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("# Forked Repositories\n\n")
+        if forked_repos:
+            for repo in forked_repos:
+                name = repo["name"]
+                description = repo.get("description", "No description available")
+                fork_url = repo["html_url"]
+                parent = repo.get("parent", {})
+                original_url = parent.get("html_url", "Unknown")
+                original_owner = parent.get("owner", {}).get("login", "Unknown")
 
-for repo in forked_repos:
-    parent = repo.get("parent", {})
-    print(f"Parent information: {parent}")
-    print(f"Forked Repository: {repo['html_url']}")
-    print(f"Original Repository: {parent.get('html_url', 'Unknown')}")
-    print(f"Owner: {parent.get('owner', {}).get('login', 'Unknown')}")
-    print(f"Description: {parent.get('description', 'No description available')}")
-    print("-" * 40)
+                f.write(f"- **[{name}]({fork_url})**\n")
+                f.write(f"  - **Original Repository**: [{original_url}]({original_url})\n")
+                f.write(f"  - **Original Owner**: {original_owner}\n")
+                f.write(f"  - **Description**: {description}\n\n")
+        else:
+            f.write("No forked repositories found.\n")
 
-# with open("forks.md", "w", encoding="utf-8") as f:
-#     f.write("# Forked Repositories\n\n")
-#     if forks:
-#         for repo in forks:
+def main():
+    # Fetch all repositories
+    repos = fetch_repositories(url, headers)
 
-#             name = repo["name"]
-#             owner = repo["owner"]
-#             desc = repo.get("description") or ""
-#             url = repo["html_url"]
-#             f.write(f"- {owner}-[{name}]({url}) - {desc}\n")
-#     else:
-#         f.write("No forked repositories found.\n")
+    # Filter forked repositories
+    forked_repos = [repo for repo in repos if repo.get("fork")]
+
+    # Generate the Markdown file
+    generate_forks_markdown(forked_repos)
+
+if __name__ == "__main__":
+    main()

@@ -12,27 +12,23 @@ headers = {
     "Accept": "application/vnd.github.v3+json"
 }
 
-print(f"Headers: {headers}")
-
-test_repo_url = f"https://api.github.com/repos/{github_account}/Analysis-Services"
-response = requests.get(test_repo_url, headers=headers)
-print(response.json())
-
 def fetch_repositories(api_url, headers):
     """Fetch all repositories for the given GitHub account."""
     repos = []
     while api_url:
         response = requests.get(api_url, headers=headers)
         response.raise_for_status()  # Raise an error for bad responses
-        data = response.json()  # Parse JSON once
-        # Debugging: Print the full response for forked repositories
-        for repo in data:
-            if repo.get("fork"):
-                print(f"Debug: Full data for forked repo {repo['name']}: {repo}")
-        repos.extend(data)
+        repos.extend(response.json())
         # Check for pagination
         api_url = response.links.get('next', {}).get('url')
     return repos
+
+def fetch_repository_details(repo_name, headers):
+    """Fetch detailed information for a specific repository."""
+    repo_url = f"https://api.github.com/repos/{github_account}/{repo_name}"
+    response = requests.get(repo_url, headers=headers)
+    response.raise_for_status()  # Raise an error for bad responses
+    return response.json()
 
 def generate_forks_markdown(forked_repos, output_file="forks.md"):
     """Generate a Markdown file listing forked repositories and their originals."""
@@ -44,11 +40,6 @@ def generate_forks_markdown(forked_repos, output_file="forks.md"):
                 description = repo.get("description", "No description available")
                 fork_url = repo["html_url"]
                 parent = repo.get("parent", {})
-
-                print(f"Debug: Full repository data for {repo['name']}: {repo}")
-
-                # Debugging: Print the parent object to understand its structure
-                print(f"Debug: Parent object for {name}: {parent}")
 
                 original_url = parent.get("html_url", "Unknown")
                 original_owner = parent.get("owner", {}).get("login", "Unknown")
@@ -64,8 +55,12 @@ def main():
     # Fetch all repositories
     repos = fetch_repositories(url, headers)
 
-    # Filter forked repositories
-    forked_repos = [repo for repo in repos if repo.get("fork")]
+    # Fetch detailed information for forked repositories
+    forked_repos = []
+    for repo in repos:
+        if repo.get("fork"):
+            detailed_repo = fetch_repository_details(repo["name"], headers)
+            forked_repos.append(detailed_repo)
 
     # Generate the Markdown file
     generate_forks_markdown(forked_repos)

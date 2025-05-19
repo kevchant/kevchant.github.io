@@ -17,10 +17,7 @@ def get_all_repos(url):
 repos = get_all_repos(API_URL)
 forks = [repo for repo in repos if repo.get("fork")]
 
-if "parent" in forks:
-    print("Forked from:", forks["parent"]["html_url"])
-else:
-    print("This repository is not a fork.")
+print(forks)
 
 with open("forks.md", "w", encoding="utf-8") as f:
     f.write("# Forked Repositories\n\n")

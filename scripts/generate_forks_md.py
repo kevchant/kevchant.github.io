@@ -17,7 +17,6 @@ def get_all_repos(url):
 repos = get_all_repos(API_URL)
 forks = [repo for repo in repos if repo.get("fork")]
 
-print(forks)
 
 with open("forks.md", "w", encoding="utf-8") as f:
     f.write("# Forked Repositories\n\n")
@@ -28,6 +27,11 @@ with open("forks.md", "w", encoding="utf-8") as f:
             owner = repo["owner"]
             desc = repo.get("description") or ""
             url = repo["html_url"]
-            f.write(f"- {owner}-[{name}]({url}) - {desc}\n")
+            parent = repo.get("parent", {})
+            parent_name = parent.get("name", "Unknown")
+            parent_owner = parent.get("owner", {}).get("login", "Unknown")
+            parent_url = parent.get("html_url", "Unknown")
+            f.write(f"- Fork: [{name}]({url}) - {desc}\n")
+            f.write(f"  - Parent: [{parent_owner}/{parent_name}]({parent_url})\n")
     else:
         f.write("No forked repositories found.\n")

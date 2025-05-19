@@ -12,6 +12,12 @@ headers = {
     "Accept": "application/vnd.github.v3+json"
 }
 
+print(f"Headers: {headers}")
+
+test_repo_url = f"https://api.github.com/repos/{github_account}/Analysis-Services"
+response = requests.get(test_repo_url, headers=headers)
+print(response.json())
+
 def fetch_repositories(api_url, headers):
     """Fetch all repositories for the given GitHub account."""
     repos = []

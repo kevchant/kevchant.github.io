@@ -1,3 +1,4 @@
+import os
 import requests
 
 github_account = os.environ.get("GH_USERNAME", "kevchant")

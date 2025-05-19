@@ -27,6 +27,7 @@ jobs:
         run: python scripts/generate_forks_md.py
         env:
           GH_USERNAME: ${{ github.repository_owner }}
+          TOKEN: ${{ secrets.TOKEN }}
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5

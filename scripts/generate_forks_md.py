@@ -1,13 +1,15 @@
 import os
 import requests
 
-github_account = os.environ.get("GH_USERNAME", "kevchant")
+# Replace with your GitHub username or organization name
+github_account = "kevchant"
+github_token = os.environ['TOKEN']
+
 url = f"https://api.github.com/users/{github_account}/repos"
+headers = {"Authorization": f"token {github_token}"}
 
-response = requests.get(url)
+response = requests.get(url, headers=headers)
 repos = response.json()
-
-forked_repos = [repo for repo in repos if repo.get("fork")]
 
 for repo in forked_repos:
     parent = repo.get("parent", {})

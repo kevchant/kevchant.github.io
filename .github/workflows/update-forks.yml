@@ -32,5 +32,5 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update forks.md with latest forked repos"
-          file_pattern: forks.md
+          commit_message: "Update md files with latest repos"
+          file_pattern: '*.md'

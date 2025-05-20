@@ -1,6 +1,10 @@
 # kevchant's GitHub Pages
 
-Hi all, and welcome to my GitHub Pages! Which allows you to easily navigate to find certain repositories that I have available.
+Hi all, and welcome to my GitHub Pages! Which allows you to easily navigate to find certain repositories that I have available relating to various Microsoft Data Platform offerings.
+
+<p align="center">
+    <img src="./images/github_page_image.jpg" alt="GitHub Page image">
+</p>
 
 You can click on any of the below links to find the relevant repositories I share for that particular area. 
 

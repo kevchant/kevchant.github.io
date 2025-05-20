@@ -69,6 +69,25 @@ def generate_azdo_microsoft_fabric_markdown(repos, output_file="azdomicrosoftfab
         else:
             f.write("No matching repositories found.\n")
 
+def generate_gh_microsoft_fabric_markdown(repos, output_file="azdomicrosoftfabric.md"):
+    """Generate a Markdown file listing non-fork repositories with specific criteria."""
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("# GitHub Repositories with Microsoft Fabric Topic\n\n")
+        filtered_repos = [
+            repo for repo in repos
+            if not repo.get("fork") and repo["name"].startswith("GitHub") and "microsoft-fabric" in repo.get("topics", [])
+        ]
+        if filtered_repos:
+            for repo in filtered_repos:
+                name = repo["name"]
+                print(f"Name: {name}")
+                description = repo.get("description", "No description available")
+                repo_url = repo["html_url"]
+                f.write(f"- **[{name}]({repo_url})**\n")
+                f.write(f"  - **Description**: {description}\n\n")
+        else:
+            f.write("No matching repositories found.\n")
+
 def main():
     # Fetch all repositories
     repos = fetch_repositories(url, headers)
@@ -82,6 +101,7 @@ def main():
 
     # Generate the Markdown files
     generate_azdo_microsoft_fabric_markdown(repos)
+    generate_gh_microsoft_fabric_markdown(repos)
     generate_forks_markdown(forked_repos)
 
 if __name__ == "__main__":

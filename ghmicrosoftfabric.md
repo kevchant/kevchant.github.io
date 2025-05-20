@@ -1,4 +1,4 @@
-# GitHub Repositories with Microsoft Fabric Topic
+# GitHub Repositories for Microsoft Fabric
 
 - **[GitHub-fabric-cicd-sample](https://github.com/kevchant/GitHub-fabric-cicd-sample)**
   - **Description**: Repository to operationalize fabric-cicd to work with Microsoft Fabric and GitHub Actions.

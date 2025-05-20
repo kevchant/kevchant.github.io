@@ -80,7 +80,8 @@ def main():
             detailed_repo = fetch_repository_details(repo["name"], headers)
             forked_repos.append(detailed_repo)
 
-    # Generate the Markdown file
+    # Generate the Markdown files
+    generate_azdo_microsoft_fabric_markdown(repos)
     generate_forks_markdown(forked_repos)
 
 if __name__ == "__main__":

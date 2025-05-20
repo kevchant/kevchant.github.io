@@ -61,9 +61,9 @@ def generate_azdo_microsoft_fabric_markdown(repos, output_file="azdomicrosoftfab
         if filtered_repos:
             for repo in filtered_repos:
                 name = repo["name"]
+                print(f"Name: {name}")
                 description = repo.get("description", "No description available")
                 repo_url = repo["html_url"]
-
                 f.write(f"- **[{name}]({repo_url})**\n")
                 f.write(f"  - **Description**: {description}\n\n")
         else:

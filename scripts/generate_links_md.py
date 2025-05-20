@@ -69,7 +69,7 @@ def generate_azdo_microsoft_fabric_markdown(repos, output_file="azdomicrosoftfab
         else:
             f.write("No matching repositories found.\n")
 
-def generate_gh_microsoft_fabric_markdown(repos, output_file="azdomicrosoftfabric.md"):
+def generate_gh_microsoft_fabric_markdown(repos, output_file="ghmicrosoftfabric.md"):
     """Generate a Markdown file listing non-fork repositories with specific criteria."""
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("# GitHub Repositories with Microsoft Fabric Topic\n\n")

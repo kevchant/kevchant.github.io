@@ -1,4 +1,4 @@
-# GitHub Repositories for Microsoft Fabric
+# GitHub Repositories for Azure Synapse
 
 - **[GitHub-AzureSynapseLinkforSQLServer2022](https://github.com/kevchant/GitHub-AzureSynapseLinkforSQLServer2022)**
   - **Description**: A complete CI/CD solution for Azure Synapse Link for SQL Server 2022 using GitHub Actions

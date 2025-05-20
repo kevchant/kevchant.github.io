@@ -1,4 +1,4 @@
-# Azure DevOps Repositories for Microsoft Fabric
+# Azure DevOps Repositories for Azure Synapse
 
 - **[AzureDevOps-AzureSynapseLinkforSQLServer2022](https://github.com/kevchant/AzureDevOps-AzureSynapseLinkforSQLServer2022)**
   - **Description**: CI/CD for Azure Synapse Link for SQL Server 2022

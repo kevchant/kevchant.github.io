@@ -53,7 +53,7 @@ def generate_forks_markdown(forked_repos, output_file="forks.md"):
 def generate_azdo_azure_synapse_markdown(repos, output_file="azdoazuresynapse.md"):
     """Generate a Markdown file listing non-fork repositories with specific criteria."""
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write("# Azure DevOps Repositories for Microsoft Fabric\n\n")
+        f.write("# Azure DevOps Repositories for Azure Synapse\n\n")
         filtered_repos = [
             repo for repo in repos
             if not repo.get("fork") and repo["name"].startswith("AzureDevOps") and "azure-synapse-analytics" in repo.get("topics", [])
@@ -72,7 +72,7 @@ def generate_azdo_azure_synapse_markdown(repos, output_file="azdoazuresynapse.md
 def generate_gh_azure_synapse_markdown(repos, output_file="ghazuresynapse.md"):
     """Generate a Markdown file listing non-fork repositories with specific criteria."""
     with open(output_file, "w", encoding="utf-8") as f:
-        f.write("# GitHub Repositories for Microsoft Fabric\n\n")
+        f.write("# GitHub Repositories for Azure Synapse\n\n")
         filtered_repos = [
             repo for repo in repos
             if not repo.get("fork") and repo["name"].startswith("GitHub") and "azure-synapse-analytics" in repo.get("topics", [])
@@ -163,6 +163,25 @@ def generate_gh_sqlserver_markdown(repos, output_file="ghsqlserver.md"):
                 f.write(f"  - **Description**: {description}\n\n")
         else:
             f.write("No matching repositories found.\n")
+# For presentations
+def generate_presentations_markdown(repos, output_file="presentations.md"):
+    """Generate a Markdown file listing non-fork repositories with specific criteria."""
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("# Past presentations\n\n")
+        filtered_repos = [
+            repo for repo in repos
+            if not repo.get("fork") and "presentations" in repo.get("topics", [])
+        ]
+        if filtered_repos:
+            for repo in filtered_repos:
+                name = repo["name"]
+                print(f"Name: {name}")
+                description = repo.get("description", "No description available")
+                repo_url = repo["html_url"]
+                f.write(f"- **[{name}]({repo_url})**\n")
+                f.write(f"  - **Description**: {description}\n\n")
+        else:
+            f.write("No matching repositories found.\n")
 def main():
     # Fetch all repositories
     repos = fetch_repositories(url, headers)
@@ -181,6 +200,7 @@ def main():
     generate_gh_microsoft_fabric_markdown(repos)
     generate_azdo_sqlserver_markdown(repos)
     generate_gh_sqlserver_markdown(repos)
+    generate_presentations_markdown(repos)
     generate_forks_markdown(forked_repos)
 
 if __name__ == "__main__":

@@ -16,4 +16,6 @@ You can click on any of the below links to find the relevant repositories I shar
 
 [Using GitHub for SQL Server deployments](ghmicrosoftfabric.md).
 
+[Past presentations](forks.md).
+
 [All repositories I have forked](forks.md).

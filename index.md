@@ -4,6 +4,10 @@ Hi all, and welcome to my GitHub Pages! Which allows you to easily navigate to f
 
 You can click on any of the below links to find the relevant repositories I share for that particular area.
 
+[Using Azure DevOps for Azure Synapse deployments](azdomicrosoftfabric.md).
+
+[Using GitHub for Azure Synapse deployments](ghmicrosoftfabric.md).
+
 [Using Azure DevOps for Microsoft Fabric deployments](azdomicrosoftfabric.md).
 
 [Using GitHub for Microsoft Fabric deployments](ghmicrosoftfabric.md).

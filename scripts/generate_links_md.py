@@ -49,6 +49,44 @@ def generate_forks_markdown(forked_repos, output_file="forks.md"):
                 f.write(f"  - **Description**: {description}\n\n")
         else:
             f.write("No forked repositories found.\n")
+# For Azure SQL Database
+def generate_azdo_azuresqldb_markdown(repos, output_file="azdoazuresqldb.md"):
+    """Generate a Markdown file listing non-fork repositories with specific criteria."""
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("# Azure DevOps Repositories for Azure SQL Database\n\n")
+        filtered_repos = [
+            repo for repo in repos
+            if not repo.get("fork") and repo["name"].startswith("AzureDevOps") and "azuresqldb" in repo.get("topics", [])
+        ]
+        if filtered_repos:
+            for repo in filtered_repos:
+                name = repo["name"]
+                print(f"Name: {name}")
+                description = repo.get("description", "No description available")
+                repo_url = repo["html_url"]
+                f.write(f"- **[{name}]({repo_url})**\n")
+                f.write(f"  - **Description**: {description}\n\n")
+        else:
+            f.write("No matching repositories found.\n")
+
+def generate_gh_azuresqldb_markdown(repos, output_file="ghazuresqldb.md"):
+    """Generate a Markdown file listing non-fork repositories with specific criteria."""
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write("# GitHub Repositories for Azure SQL Database\n\n")
+        filtered_repos = [
+            repo for repo in repos
+            if not repo.get("fork") and repo["name"].startswith("GitHub") and "azuresqldb" in repo.get("topics", [])
+        ]
+        if filtered_repos:
+            for repo in filtered_repos:
+                name = repo["name"]
+                print(f"Name: {name}")
+                description = repo.get("description", "No description available")
+                repo_url = repo["html_url"]
+                f.write(f"- **[{name}]({repo_url})**\n")
+                f.write(f"  - **Description**: {description}\n\n")
+        else:
+            f.write("No matching repositories found.\n")
 # For Azure Synapse Analytics
 def generate_azdo_azure_synapse_markdown(repos, output_file="azdoazuresynapse.md"):
     """Generate a Markdown file listing non-fork repositories with specific criteria."""
@@ -194,6 +232,8 @@ def main():
             forked_repos.append(detailed_repo)
 
     # Generate the Markdown files
+    generate_azdo_azuresqldb_markdown(repos)
+    generate_gh_azuresqldb_markdown(repos)
     generate_azdo_azure_synapse_markdown(repos)
     generate_gh_azure_synapse_markdown(repos)
     generate_azdo_microsoft_fabric_markdown(repos)

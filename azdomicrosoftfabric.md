@@ -1,4 +1,4 @@
-# Azure DevOps Repositories with Microsoft Fabric Topic
+# Azure DevOps Repositories for Microsoft Fabric
 
 - **[AzureDevOps-AutomateFabricDeploymentPipeline](https://github.com/kevchant/AzureDevOps-AutomateFabricDeploymentPipeline)**
   - **Description**: Template to automate your Microsoft Fabric Deployment Pipeline deployments using YAML Pipelines in Azure DevOps

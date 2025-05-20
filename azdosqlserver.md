@@ -1,11 +1,11 @@
-# GitHub Repositories with Microsoft Fabric Topic
+# Azure DevOps Repositories for SQL Server
 
-- **[GitHub-fabric-cicd-sample](https://github.com/kevchant/GitHub-fabric-cicd-sample)**
-  - **Description**: Repository to operationalize fabric-cicd to work with Microsoft Fabric and GitHub Actions.
+- **[AzureDevOps-AzureSynapseLinkforSQLServer2022](https://github.com/kevchant/AzureDevOps-AzureSynapseLinkforSQLServer2022)**
+  - **Description**: CI/CD for Azure Synapse Link for SQL Server 2022
 
-- **[GitHub-FabricDWDBProject](https://github.com/kevchant/GitHub-FabricDWDBProject)**
-  - **Description**: About Template to perform CI/CD for Microsoft Fabric Data Warehouses using GitHub Actions
-
-- **[GitHub-SQLDatabaseinFabric](https://github.com/kevchant/GitHub-SQLDatabaseinFabric)**
+- **[AzureDevOps-SQLDatabaseinFabric](https://github.com/kevchant/AzureDevOps-SQLDatabaseinFabric)**
   - **Description**: Template to perform CI/CD for SQL database in Fabric
+
+- **[AzureDevOps-SQLServerDatabaseProject](https://github.com/kevchant/AzureDevOps-SQLServerDatabaseProject)**
+  - **Description**: Example of a SQL database project that deploys to various different types of SQL Server related databases in Azure DevOps.
 

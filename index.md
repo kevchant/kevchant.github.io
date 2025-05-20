@@ -10,6 +10,8 @@ You can click on any of the below links to find the relevant repositories I shar
 
 For example, clicking on the "Using Azure DevOps for Azure SQL Database deployments" link will take you to all the repositories I share relating to using Azure DevOps for Azure SQL Database deployments.
 
+My only ask is that if any of the repositories prove to be useful for you please give them a star in GitHub.
+
 [Using Azure DevOps for Azure SQL Database deployments](azdoazuresqldb.md).
 
 [Using GitHub for Azure SQL database deployments](ghazuresqldb.md).

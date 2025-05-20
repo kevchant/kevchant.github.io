@@ -2,8 +2,14 @@
 
 Hi all, and welcome to my GitHub Pages! Which allows you to easily navigate to find certain repositories that I have available.
 
-You can find the repositories relating to using Azure DevOps for Microsoft Fabric deployments [here](azdomicrosoftfabric.md).
+You can click on any of the below links to find the relevant repositories I share for that particular area.
 
-You can find the repositories relating to using GitHub for Microsoft fabric deployments [here](ghmicrosoftfabric.md).
+[Using Azure DevOps for Microsoft Fabric deployments](azdomicrosoftfabric.md).
 
-You can see all repositories I have forked [here](forks.md).
+[Using GitHub for Microsoft Fabric deployments](ghmicrosoftfabric.md).
+
+[Using Azure DevOps for SQL Server deployments](azdomicrosoftfabric.md).
+
+[Using GitHub for SQL Server deployments](ghmicrosoftfabric.md).
+
+[All repositories I have forked](forks.md).

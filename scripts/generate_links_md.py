@@ -68,7 +68,7 @@ def generate_azdo_microsoft_fabric_markdown(repos, output_file="azdomicrosoftfab
                 f.write(f"  - **Description**: {description}\n\n")
         else:
             f.write("No matching repositories found.\n")
-            
+
 def main():
     # Fetch all repositories
     repos = fetch_repositories(url, headers)

@@ -36,3 +36,5 @@ My only ask is that if any of the repositories prove to be useful for you please
 <script src="https://counterapi.com/c.js?ns=kevchant.github.io/" async ></script>
 <!-- Add the counter instance-->
 <div class="counterapi" label="views" style="min-height:44px" ></div>
+
+Count is provided by [CounterAPI](https://counterapi.com/)

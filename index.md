@@ -31,5 +31,3 @@ My only ask is that if any of the repositories prove to be useful for you please
 [Past presentations](presentations.md).
 
 [All repositories I have forked](forks.md).
-
-![Visitor Count](https://visitor-badge.glitch.me/badge?page_id=kevchant.github.io)

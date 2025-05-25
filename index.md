@@ -31,3 +31,8 @@ My only ask is that if any of the repositories prove to be useful for you please
 [Past presentations](presentations.md).
 
 [All repositories I have forked](forks.md).
+
+<!-- counterAPI library -->
+<script src="https://counterapi.com/c.js?ns=kevchant.github.io/" async ></script>
+<!-- Add the counter instance-->
+<div class="counterapi" style="min-height:44px" ></div>

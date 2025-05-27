@@ -4,5 +4,5 @@
   - **Description**: Slides for my presentations for 2025
 
 - **[PastPresentations](https://github.com/kevchant/PastPresentations)**
-  - **Description**: None
+  - **Description**: Past presentations before 2025
 

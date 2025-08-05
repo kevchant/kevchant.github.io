@@ -15,6 +15,9 @@
 - **[AzureDevOps-FabricDWDBProject](https://github.com/kevchant/AzureDevOps-FabricDWDBProject)**
   - **Description**: Template to perform CI/CD for Microsoft Fabric Data Warehouses
 
+- **[AzureDevOps-FUAM-Deploymenator](https://github.com/kevchant/AzureDevOps-FUAM-Deploymenator)**
+  - **Description**: FUAM deployment accelerator to push FUAM deployments from Azure DevOps to a Microsoft Fabric tenant
+
 - **[AzureDevOps-serverlessSQLPoolToFabricDW](https://github.com/kevchant/AzureDevOps-serverlessSQLPoolToFabricDW)**
   - **Description**: Example of a state-Based deployment that can create a dacpac file based on an existing database within a serverless SQL Pool and then deploy it to a Microsoft Fabric Data Warehouse
 
